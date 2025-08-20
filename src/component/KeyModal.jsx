@@ -55,7 +55,7 @@ export default function KeyModal({ isOpen, onClose }) {
         </div>
 
         <div className="mt-6 flex justify-end">
-          <button className="px-6 py-2 bg-green-600 text-white rounded-lg hover:bg-green-700">
+          <button className="px-6 py-2 bg-green-700 text-white rounded-lg hover:bg-green-700">
             Ask
           </button>
         </div>
