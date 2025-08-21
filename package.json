@@ -2,15 +2,14 @@
   "name": "assignment",
   "private": true,
   "version": "0.0.0",
-    "homepage": "https://github.com/Aditya9429/Consumer-Web",
-
+  "homepage": "https://github.com/Aditya9429/Consumer-Web",
   "type": "module",
   "scripts": {
     "dev": "vite --host",
     "build": "vite build",
     "lint": "eslint .",
     "preview": "vite preview",
-    "predeploy" : "npm run build",
+    "predeploy": "npm run build",
     "deploy": "vite build && gh-pages -d dist"
   },
   "dependencies": {
