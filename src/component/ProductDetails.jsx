@@ -132,17 +132,35 @@ export default function ProductDetails() {
 
                 </div>
 
-                <div> <div> {content.review && content.review.length > 0 ?
-                 (
-                    content.review.map((rev, index) =>
-                     (Array.from({ length: 2 }).map((_, repeatIndex) => (
-                     <div key={`${index}- ${ repeatIndex }`} className='w-full flex gap-2 rounded-2xl bg-pink-200 p-4 mb-4'> <div> <p className='text-[#000000] py-3 px-4 bg-white rounded-[50%]'>{rev.logo}</p> </div> <div> <p className='mb-3'>{rev.description}</p> <div className='flex items-center gap-3'> <p className='text-base font-normal text-[#646665]'>{rev.name}</p> • <p className='text-base font-normal text-[#646665]'>{rev.date}</p> • {Array.from({ length: 5 }).map((_, i) => (<span key={i} className="text-yellow-400 text-sm">★</span>))} </div> </div> </div> )) )) ) : ( <p>Unable To get Review Data</p> ) } </div> </div>
+                <div>
+                    <div> {content.review && content.review.length > 0 ?
+                        (
+                            content.review.map((rev, index) =>
+                            (Array.from({ length: 2 }).map((_, repeatIndex) => (
+                                <div key={`${index}- ${repeatIndex}`} className='w-full flex flex-col lg:flex-row  gap-2 rounded-2xl bg-pink-200 p-4 mb-4'>
+                                    <div> 
+                                        <p className='w-[50px] text-[#000000] py-3 px-4 bg-white rounded-[50%]'>{rev.logo}</p>
+                                    </div> 
+                                    <div>
+                                         <p className='mb-3'>{rev.description}</p>
+                                        <div className='flex items-center gap-3'>
+                                            <p className='text-base font-normal text-[#646665]'>{rev.name}</p> • <p className='text-base font-normal text-[#646665]'>{rev.date}</p> •
+                                            {Array.from({ length: 5 }).map((_, i) => (
+                                                <span key={i} className="text-yellow-400 text-sm">★</span>
+                                            ))}
+                                        </div>
+                                    </div>
+                                </div>
+                            ))))) :
+                        (
+                            <p>Unable To get Review Data</p>
+                        )} </div> </div>
 
-            <Experts />
-        </div>
+                <Experts />
+            </div>
 
-            {/* Download Section */ }
-    <DownloadApp />
+            {/* Download Section */}
+            <DownloadApp />
         </div >
     );
 }
