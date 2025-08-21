@@ -58,8 +58,8 @@ export default function DownloadApp() {
 
         <div className="flex flex-col items-center gap-8">
           <div className="flex items-center gap-6">
-            <img src="/images/Time.png" alt="Engagement Time" />
-            <img src="/images/Phone.png" alt="App Preview" className="max-h-[400px]" />
+            <img src="/images/Time.png" alt="Engagement Time" className="max-w-[150px]" />
+            <img src="/images/Phone.png" alt="App Preview" className="max-h-[200px] lg:max-w-[400px]" />
           </div>
           <div className="bg-[#F4F4F4] px-6 py-3 rounded-xl shadow-sm text-center">
             <h1 className="text-xl font-semibold text-[#3A643B]">10K+ Downloads</h1>

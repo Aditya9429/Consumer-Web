@@ -84,10 +84,10 @@ export const product = [
 This 100% natural Ayurvedic jam is extremely effective in fighting chronic diseases.
 Giving your little one Amrutam's Child Care Malt daily will help them Improve their appetite and digestion.
 It is useful in treating anemia, general debility and maintaining a healthy weight.
-✅ 100% Natural and Ayurvedic
-✅ PETA certified cruelty-free
-✅ Hand-picked and ethically sourced ingredients
-✅ AYUSH certified and US FDA approved`,
+ 100% Natural and Ayurvedic
+ PETA certified cruelty-free
+ Hand-picked and ethically sourced ingredients
+ AYUSH certified and US FDA approved`,
             },
         ],
         review: [

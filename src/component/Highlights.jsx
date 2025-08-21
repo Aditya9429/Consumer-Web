@@ -23,7 +23,7 @@ export default function Highlights() {
         <div className=''>
             <div className='flex items-center gap-3 mb-3'>
                
-                    <img src="/images/Med.gif" />
+                    <img src="/images/Medi.png" className='w-[30px]'/>
                     <p className='text-xl font-bold text-[#2E2F2E]'>Product Highlight</p>
                
 

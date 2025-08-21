@@ -5,7 +5,7 @@ export default function KeyModal({ isOpen, onClose }) {
   if (!isOpen) return null;
 
   return (
-    <div className="fixed inset-0 flex justify-center items-center bg-[#ede3e3] z-50">
+    <div className="fixed inset-0 flex justify-center items-center bg-[#ede3e3] z-50 p-10">
       <div className="bg-white rounded-xl w-[500px] p-6 relative shadow-lg">
         <button
           className="absolute top-3 right-3 text-gray-600 hover:text-black"

@@ -40,7 +40,7 @@ export default function Products({ id, image, name, price, quantity }) {
         <div className="flex items-center justify-between w-full mt-3">
         
           <div className="flex items-center gap-1">
-            <div className="flex items-center ml-38">
+            <div className="flex items-center ml-23 lg:ml-38">
               {Array.from({ length: 5 }).map((_, i) => (
                 <span key={i} className="text-yellow-400 text-sm">★</span>
               ))}

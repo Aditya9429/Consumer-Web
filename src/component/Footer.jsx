@@ -4,7 +4,7 @@ import { FaFacebookF, FaInstagram, FaYoutube, FaTwitter, FaLinkedinIn } from "re
 export default function Footer() {
     return (
         <div className='w-full bg-[#DBE3DC]'>
-            <div className='grid grid-cols-1 lg:grid-cols-3  gap-5  p-15 max-w-[5xl] '>
+            <div className='grid grid-cols-1 lg:grid-cols-3  gap-5  p-5 lg:p-10  max-w-[5xl] '>
                 <div className='flex flex-col items-start gap-5'>
                     <h1 className='text-[#0e623b] font-semibold'>Get in Touch</h1>
                     <div className='flex flex-col gap-3'>
@@ -32,8 +32,8 @@ export default function Footer() {
                 </div>
                 <div className='flex flex-col gap-4 '>
                     <h1 className='font-semibold max-w-[300px] text-[#0e623b]'>Subscribe to our Newsletter and join Amrutam Family today!</h1>
-                    <div>
-                        <input type='text' placeholder='Your Email Address' className='rounded-l-3xl p-4 border border-black' />
+                    <div className='w-[300px] flex'>
+                        <input type='text' placeholder='Your Email Address' className='w-full max-w-[400px] rounded-l-3xl p-4 border border-black' />
                         <button className='bg-black text-white p-4 rounded-r-3xl'>Subscribe</button>
                     </div>
                 </div>

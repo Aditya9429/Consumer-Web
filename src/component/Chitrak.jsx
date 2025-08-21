@@ -2,11 +2,12 @@ import React from 'react'
 import { GiBarbedCoil } from "react-icons/gi";
 import DoshEffect from './DoshEffect';
 import { FaLocationDot } from "react-icons/fa6";
+import ChitrakIngredient from './ChitrakIngredient';
 
 function BenefitCard({ icon, text }) {
     return (
-        <div className="bg-[#FFEEDB] p-4 rounded-xl flex flex-col items-start gap-3 shadow-sm">
-            <div className="text-2xl">{icon}</div>
+        <div className=" bg-[#FFEEDB] p-4 rounded-xl flex flex-col items-start gap-3 shadow-sm">
+            <img src={icon} className="text-2xl rounded-xl p-3 bg-[#FFD8A2]" />
             <p className="text-[16px] font-medium text-[#000000]">{text}</p>
         </div>
     );
@@ -33,14 +34,14 @@ export default function Chitrak() {
                 { id: 3, icon: "/images/Fire.png", name: "Kapha balance", percentage: "40" }
             ],
             benefits: [
-                { icon: "🍷", text: "Calms the nervous system and reduces anxiety" },
-                { icon: "⚖️", text: "Reduces cholesterol and supports weight loss" },
-                { icon: "🩸", text: "Manages diabetes by lowering blood sugar levels" },
-                { icon: "💊", text: "Beneficial in hemorrhoids of Vata origin" },
-                { icon: "🍽️", text: "Improves digestion and boosts metabolism" },
-                { icon: "❤️", text: "Prevents deposits in arteries, supporting heart health" },
-                { icon: "🌿", text: "Treats skin conditions like acne and dermatitis" },
-                { icon: "🩹", text: "Speeds up wound healing and promotes new skin growth" },
+                { icon: "/images/Head.png", text: "Calms the nervous system and reduces anxiety" },
+                { icon: "/images/Weight.png", text: "Reduces cholesterol and supports weight loss" },
+                { icon: "/images/Blood.png", text: "Manages diabetes by lowering blood sugar levels" },
+                { icon: "/images/Medicine2.png", text: "Beneficial in hemorrhoids of Vata origin" },
+                { icon: "/images/Dish.png", text: "Improves digestion and boosts metabolism" },
+                { icon: "/images/Heart.png", text: "Prevents deposits in arteries, supporting heart health" },
+                { icon: "/images/Leaf.png", text: "Treats skin conditions like acne and dermatitis" },
+                { icon: "/images/Dish.png", text: "Speeds up wound healing and promotes new skin growth" },
             ],
             ayurvedicProperties: [
                 {
@@ -59,7 +60,7 @@ export default function Chitrak() {
                 },
                 {
                     id: 3,
-                    img: "/images/Fram2.png",
+                    img: "/images/Guna.png",
                     name: "Guna",
                     heading: "Laghu (Light), Ruksha (Dry), Tikshna (Sharp)",
                     title: "Easy to digest, reduces heaviness"
@@ -99,11 +100,30 @@ export default function Chitrak() {
                 { id: 4, img: "/images/Match.png", name: "Chitrakadi Churna" }
             ],
             therapeuticUses: [
-                { name: "Agnimandya", use: "Digestion, skin conditions, manage blood sugar level" },
-                { name: "Grahani Rog", use: "Manages obesity, metabolism, used in weight loss" },
-                { name: "Arsha", use: "Beneficial for hemorrhoids" },
-                { name: "Udara Shula", use: "Useful in abdominal pain issues" },
-                { name: "Gudasotha", use: "Used externally for skin conditions and wounds" }
+                {
+                    name: "Agnimandya",
+                    img  : "/images/thera1.png",
+                   
+                },
+                {
+                    name: "Grahani Rog",
+                   img  : "/images/thera2.png",
+
+                    
+                },
+                {
+                    name: "Arsha",
+                       img  : "/images/thera3.png",
+                   
+                },
+                {
+                    name: "Udara Shula",
+                       img  : "/images/thera4.png",
+                },
+                {
+                    name: "Gudasotha",
+                       img  : "/images/thera5.png",
+                }
             ]
         }
     ];
@@ -137,28 +157,29 @@ export default function Chitrak() {
                             <div className="bg-[#FFF6EB] p-4 rounded-xl shadow-sm">
                                 <h2 className="text-xl font-semibold mb-2">🌿 Why Citrak?</h2>
                                 <div>
-                                     {item.whyCitrak.map((reason, i) => (
-                                              <div key={i} className='flex items-center gap-3'>
-                                                <img src="/images/Group1.png" className='w-[20px]'/>
-                                                <p>{reason}</p>
-                                              </div>
-                                     ))}
+                                    {item.whyCitrak.map((reason, i) => (
+                                        <div key={i} className='flex items-center gap-3'>
+                                            <img src="/images/Group1.png" className='w-[20px]' />
+                                            <p>{reason}</p>
+                                        </div>
+                                    ))}
                                 </div>
                             </div>
 
                             <DoshEffect item={item} />
 
-                            <h2 className="text-xl font-semibold mt-4 p-5 mb-5">Benefits</h2>
-                            <div className="grid grid-cols-2 sm:grid-cols-2 gap-4 mt-5 p-5">
+                            <h2 className="text-xl font-semibold mt-4 p-5 mb-1">Benefits</h2>
+
+                            <div className="grid grid-cols-2 sm:grid-cols-2 gap-4  p-5">
                                 {item.benefits.map((benefit, i) => (
                                     <BenefitCard key={i} icon={benefit.icon} text={benefit.text} />
                                 ))}
                             </div>
 
                             <div className="bg-[#FFF6EB] p-6 rounded-xl shadow-sm">
-                                <h2 className="text-xl font-semibold mb-6">🧪 Ayurvedic Properties</h2>
+                                <h2 className="text-xl font-semibold mb-6">Ayurvedic Properties</h2>
 
-                                <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
+                                <div className="grid grid-cols-2 sm:grid-cols-2 gap-6">
                                     {item.ayurvedicProperties.map((prop, i) => (
                                         <div
                                             key={i}
@@ -174,7 +195,7 @@ export default function Chitrak() {
                             </div>
 
                             <div className="bg-[#FFF6EB] p-4 rounded-xl shadow-sm">
-                                <h2 className="text-xl font-semibold mb-4">💊 Important Formulations</h2>
+                                <h2 className="text-xl font-semibold mb-4">Important Formulations</h2>
                                 <div className="grid grid-cols-2 gap-4">
                                     {item.importantFormulations.map((form, i) => (
                                         <div key={i} className="flex flex-col items-center text-center p-2 rounded-lg">
@@ -189,13 +210,22 @@ export default function Chitrak() {
                                 </div>
                             </div>
 
-                            <div className="bg-[#FFF6EB] p-4 rounded-xl shadow-sm">
-                                <h2 className="text-xl font-semibold mb-2">🩺 Therapeutic Uses</h2>
-                                <ul className="list-disc list-inside ml-4">
-                                    {item.therapeuticUses.map((use, i) => (
-                                        <li key={i}><strong>{use.name}:</strong> {use.use}</li>
-                                    ))}
-                                </ul>
+                            <div>
+                                <h1 className='text-xl font-semibold mb-4'>Therapeutic Use</h1>
+                                <div className='grid grid-cols-3 lg:grid-cols-5 gap-3 bg-[#FFE9CB] p-4 rounded-2xl '>
+                                    {
+                                        item.therapeuticUses.map((thera, i) => (
+                                            <div key={i} className='flex flex-col items-center gap-3'>
+                                                <div className='flex items-center justify-center w-[100px] h-[100px] bg-white rounded-full '>
+                                                    <div className='flex items-center justify-center w-[70px] h-[70px] bg-[#E0E8E2] rounded-full p-4'>
+                                                        <img src={thera.img} />
+                                                    </div>
+                                                </div>
+                                                <p className='text-base font-normal text-[#161616]'>{thera.name}</p>
+                                            </div>
+                                        ))
+                                    }
+                                </div>
                             </div>
 
                             <div className='p-5'>
@@ -231,6 +261,9 @@ export default function Chitrak() {
                         </div>
                     ))}
                 </div>
+            </div>
+            <div>
+                <ChitrakIngredient />
             </div>
         </div>
     );

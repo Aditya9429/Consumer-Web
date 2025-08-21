@@ -55,7 +55,7 @@ export default function Header() {
     const [activetab, setActiveTab] = useState("questions");
     const [isModalOpen, setIsModalOpen] = useState(false);
     return (
-        <div className='w-full flex flex-col max-w-2xl mx-auto mt-10  mb-10 rounded-2xl shadow-md'>
+        <div className='w-full flex flex-col max-w-2xl mx-auto mt-10  mb-10 rounded-2xl  p-5'>
             <div className='flex justify-evenly items-center border-b border-green-600 pb-3 mb-6 pt-4'>
                 <div className='flex gap-10 text-2xl text-[#B8B8B8]'>
                     <button onClick={() => setActiveTab("questions")} className={` ${activetab == "questions" ? "border-b-2 text-green-600 border-green-600" : ""}`}>Questions </button>
